@@ -1,0 +1,67 @@
+body{
+    background-color: cadetblue;
+}
+
+.calculator{
+    border: 5px orchid solid;
+    background-color: aquamarine;
+    display: grid;/* changes the html to grid format*/
+    grid-template-columns: repeat(4,1fr);/* this makes the html dispay 4 items per each col*/
+    grid-template-rows: minmax(120px,auto) repeat(5,100px);
+    grid-gap: 3px; /* leaves a gap of 5px between each col*/
+    max-width: 400px;
+    margin: 0 auto; /*leaves a reasonabe gap for elements*/
+}
+.calculator>button{
+    cursor: pointer;
+}
+.calculator>button:hover{
+    background-color: aqua;
+}
+
+
+/*manipulating the buttons*/
+.grid-item{
+    grid-column: span 1;/*does not really change anything lo*/
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: brown;
+
+}
+/*MANIPULATING THE 2 BUTTONS TO HAVE A SIZE LARGER THAN THE OTHER  */
+#AC{
+    grid-column: span 2;
+    background-color: red;
+    
+}
+#EQU{
+    grid-column: span 2;
+    background-color: blueviolet;
+}
+/*manipulating the display tab [empty fom]*/
+.display{
+    grid-column: span 4;/*makes the tab to go on its own colomn*/
+    display: flex;
+    align-items: end;
+    justify-content: space-around;/* makes it to display closer to each other */
+    padding: 10px;
+    flex-direction: column; /* makes the items to display in colon format , one on top other on bottom*/
+    background-color: blue;
+    word-wrap: break-word; /*to make the text wra[p as it gets too long*/
+    word-break: break-all;
+}
+/* manipulating the prev and the current calc values*/
+.display .previous{
+    color: white;
+    font-style: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+
+}
+.display .current{
+    color: white;
+    font-style: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:medium;
+
+}
